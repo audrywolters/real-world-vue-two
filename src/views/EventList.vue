@@ -6,61 +6,75 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import EventCard from '@/components/EventCard.vue'
+    // @ is an alias to /src
+    import EventCard from '@/components/EventCard.vue'
+    import axios from 'axios'
 
-export default {
-  name: 'EventList',
-  components: {
-    EventCard
-  },
-  data() {
-      return {
-          events: [
-              {
-                  id: 5928101,
-                  category: 'animal welfare',
-                  title: 'Cat Adoption Day',
-                  description: 'Find your new feline friend at this event.',
-                  location: 'Meow Town',
-                  date: 'January 28, 2022',
-                  time: '12:00',
-                  petsAllowed: true,
-                  organizer: 'Kat Laydee'
-              },
-              {
-                  id: 4582797,
-                  category: 'food',
-                  title: 'Community Gardening',
-                  description: 'Join us as we tend to the community edible plants.',
-                  location: 'Flora City',
-                  date: 'March 14, 2022',
-                  time: '10:00',
-                  petsAllowed: true,
-                  organizer: 'Fern Pollin'
-              },
-              {
-                  id: 8419988,
-                  category: 'sustainability',
-                  title: 'Beach Cleanup',
-                  description: 'Help pick up trash along the shore.',
-                  location: 'Playa Del Carmen',
-                  date: 'July 22, 2022',
-                  time: '11:00',
-                  petsAllowed: false,
-                  organizer: 'Carey Wales'
-              }
-          ]
-      }
-  }
+    export default {
+        name: 'EventList',
+        components: {
+            EventCard
+        },
+        // testing axios w/ rob's help
+        //mounted() {
 
-}
+        //    console.log('in mounted call');
+
+        //    axios.get(`https://random-data-api.com/api/users/random_user`)
+        //        .then(result => {
+        //            console.log('get successful, result.data:', result.data);
+        //        })
+        //        .catch(err => {
+        //            console.log('error on get', err);
+        //        })
+        //},
+        data() {
+            return {
+                events: [
+                    {
+                        id: 5928101,
+                        category: 'animal welfare',
+                        title: 'Cat Adoption Day',
+                        description: 'Find your new feline friend at this event.',
+                        location: 'Meow Town',
+                        date: 'January 28, 2022',
+                        time: '12:00',
+                        petsAllowed: true,
+                        organizer: 'Kat Laydee'
+                    },
+                    {
+                        id: 4582797,
+                        category: 'food',
+                        title: 'Community Gardening',
+                        description: 'Join us as we tend to the community edible plants.',
+                        location: 'Flora City',
+                        date: 'March 14, 2022',
+                        time: '10:00',
+                        petsAllowed: true,
+                        organizer: 'Fern Pollin'
+                    },
+                    {
+                        id: 8419988,
+                        category: 'sustainability',
+                        title: 'Beach Cleanup',
+                        description: 'Help pick up trash along the shore.',
+                        location: 'Playa Del Carmen',
+                        date: 'July 22, 2022',
+                        time: '11:00',
+                        petsAllowed: false,
+                        organizer: 'Carey Wales'
+                    }
+                ]
+            }
+        }
+
+    }
 </script>
 
 <style scoped>
-.events {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .events {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 </style>
