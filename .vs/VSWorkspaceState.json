@@ -3,8 +3,10 @@
     "",
     "\\public",
     "\\src",
-    "\\src\\router"
+    "\\src\\components",
+    "\\src\\router",
+    "\\src\\views"
   ],
-  "SelectedNode": "\\src\\router\\index.js",
+  "SelectedNode": "\\src\\views\\EventDetails.vue",
   "PreviewInSolutionExplorer": false
 }
